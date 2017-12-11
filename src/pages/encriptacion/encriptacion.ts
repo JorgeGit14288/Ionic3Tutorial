@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms'; //lo importamos para usar formularios
+//importamos la clase de encriptación
+import Sec from '../../util/security';
+import { security } from '../../util/security';
 
 /**
  * Generated class for the EncriptacionPage page.
@@ -8,42 +11,43 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms'; //lo import
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-
 @IonicPage()
 @Component({
   selector: 'page-encriptacion',
   templateUrl: 'encriptacion.html',
 })
+
 export class EncriptacionPage {
 
-  //creamos un formulario
-
-  public firstForm: any;
-
-  todo = {}
- 
+//DECLARAMOS LAS VARIABLES
+private encriptado:string ="Hola";
+myForm: FormGroup;
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     //lo importamos para usar formularios
     public formBuilder: FormBuilder) {
-    this.todo = this.formBuilder.group({
-      title: ['', Validators.required],
-      description: [''],
-    });
-
+      this.myForm = this.createMyForm();
   }
+
+  //creamos el formulario
+  private createMyForm(){
+    return this.formBuilder.group({
+      key: ['', Validators.required],
+      texto: ['', Validators.required],
+      resultado: [''],
+      desencriptado: ['']
+    });
+  }
+
 
   logForm() {
-    console.log(this.todo)
-  }
-
-  Encriptar() {
-    return "Ecriptado;"
+    console.log(this.myForm.value);
   }
   //cuando se carga la pagina
   ionViewDidLoad() {
     console.log('ionViewDidLoad EncriptacionPage');
+    this.myForm.resultado = "atrape un valor";
   }
 
 }

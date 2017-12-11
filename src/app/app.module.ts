@@ -15,6 +15,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { FormularioPage } from '../pages/formulario/formulario';
 import { Formulario2Page } from '../pages/formulario2/formulario2';
 import { FormularioDetailsPage } from '../pages/formulario-details/formulario-details';
+import { Formulario3Page } from '../pages/formulario3/formulario3';
+import { Formulario3DetailsPage } from '../pages/formulario3-details/formulario3-details';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { FormularioDetailsPage } from '../pages/formulario-details/formulario-de
     EncriptacionPage, //agregamos la nueva pagina
     FormularioPage,
     Formulario2Page,
-    FormularioDetailsPage
+    Formulario3Page,
+    FormularioDetailsPage,
+    Formulario3DetailsPage
     
   ],
   imports: [
@@ -42,7 +46,9 @@ import { FormularioDetailsPage } from '../pages/formulario-details/formulario-de
     EncriptacionPage, //agregamos la nueva pagina
     FormularioPage,
     Formulario2Page,
-    FormularioDetailsPage
+    Formulario3Page,
+    FormularioDetailsPage,
+    Formulario3DetailsPage
   ],
   providers: [
     StatusBar,

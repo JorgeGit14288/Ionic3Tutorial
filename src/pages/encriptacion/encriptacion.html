@@ -7,24 +7,36 @@
 <ion-header>
 
   <ion-navbar>
+      <!-- PARA AGREGAR EL BOTON DEL MENU -->
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
     <ion-title>Encriptacion</ion-title>
   </ion-navbar>
 
 </ion-header>
-
-
 <ion-content padding>
-
-  <form [formGroup]="todo" (ngSubmit)="logForm()">
-    <ion-item>
-      <ion-label>Todo</ion-label>
-      <ion-input type="text" formControlName="title"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Description</ion-label>
-      <ion-textarea formControlName="description"></ion-textarea>
-    </ion-item>
-    <button ion-button type="submit" [disabled]="!todo.valid">Submit</button>
+  <form [formGroup]="myForm" (ngSubmit)="logForm()">
+    <ion-list>
+      <ion-item>
+        <ion-label>Key:</ion-label>
+        <ion-input formControlName="key" type="text" placeholder="Ingrese la clave" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Texto:</ion-label>
+        <ion-input formControlName="texto" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Resultado</ion-label>
+        <ion-input formControlName="resultado" type="text" readonly ></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label>Desencriptado</ion-label>
+          <ion-input formControlName="desencriptado" type="text" readonly ></ion-input>
+        </ion-item>
+    </ion-list>
+    <div padding>
+        <button ion-button block type="submit" [disabled]="!myForm.valid">Guardar</button>
+      </div>
   </form>
-
 </ion-content>
