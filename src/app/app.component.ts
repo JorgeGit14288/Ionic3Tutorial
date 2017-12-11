@@ -8,6 +8,9 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { EncriptacionPage } from '../pages/encriptacion/encriptacion';
+import { FormularioPage } from '../pages/formulario/formulario';
+import { Formulario2Page } from '../pages/formulario2/formulario2';
+import { Formulario3Page } from '../pages/formulario3/formulario3';
 
 
 @Component({
@@ -32,7 +35,10 @@ export class MyApp {
     this.pages = [
       { title: 'Hello Ionic', component: HelloIonicPage },
       { title: 'My First List', component: ListPage },
-      { title: 'Encriptacion', component: EncriptacionPage } //AGREGARMOS LA NUEVA PAGINA
+      { title: 'Encriptacion', component: EncriptacionPage }, //AGREGARMOS LA NUEVA PAGINA
+      { title: 'Formulario 1', component: FormularioPage }, //agregamos el formulario 1
+      { title: 'Formulario 2', component: Formulario2Page },//formulario 2
+      { title: 'Formulario 3', component: Formulario3Page } //formulario 3
     ];
   }
 

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms'; //lo importamos para usar formularios
 
 /**
  * Generated class for the EncriptacionPage page.
@@ -15,9 +16,32 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class EncriptacionPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  //creamos un formulario
+
+  public firstForm: any;
+
+  todo = {}
+ 
+
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams,
+    //lo importamos para usar formularios
+    public formBuilder: FormBuilder) {
+    this.todo = this.formBuilder.group({
+      title: ['', Validators.required],
+      description: [''],
+    });
+
   }
 
+  logForm() {
+    console.log(this.todo)
+  }
+
+  Encriptar() {
+    return "Ecriptado;"
+  }
+  //cuando se carga la pagina
   ionViewDidLoad() {
     console.log('ionViewDidLoad EncriptacionPage');
   }
