@@ -20,7 +20,8 @@ import { security } from '../../util/security';
 export class EncriptacionPage {
 
 //DECLARAMOS LAS VARIABLES
-private encriptado:string ="Hola";
+private encriptado:string ="";
+private desencriptado:string="";
 myForm: FormGroup;
 
   constructor(public navCtrl: NavController,
@@ -43,11 +44,12 @@ myForm: FormGroup;
 
   logForm() {
     console.log(this.myForm.value);
+    console.log(this.myForm.value.key);
   }
   //cuando se carga la pagina
   ionViewDidLoad() {
     console.log('ionViewDidLoad EncriptacionPage');
-    this.myForm.resultado = "atrape un valor";
+    
   }
 
 }

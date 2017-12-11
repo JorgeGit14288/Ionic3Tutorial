@@ -28,15 +28,16 @@
       </ion-item>
       <ion-item>
         <ion-label>Resultado</ion-label>
-        <ion-input formControlName="resultado" type="text" readonly ></ion-input>
+        <ion-input formControlName="resultado" type="text" value="hola2" readonly ></ion-input>
       </ion-item>
       <ion-item>
           <ion-label>Desencriptado</ion-label>
-          <ion-input formControlName="desencriptado" type="text" readonly ></ion-input>
+          <ion-input formControlName="desencriptado" type="text" value="hola1" readonly ></ion-input>
         </ion-item>
     </ion-list>
     <div padding>
         <button ion-button block type="submit" [disabled]="!myForm.valid">Guardar</button>
       </div>
   </form>
+
 </ion-content>
