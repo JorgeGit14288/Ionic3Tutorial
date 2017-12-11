@@ -37,8 +37,7 @@ export class MyApp {
       { title: 'My First List', component: ListPage },
       { title: 'Encriptacion', component: EncriptacionPage }, //AGREGARMOS LA NUEVA PAGINA
       { title: 'Formulario 1', component: FormularioPage }, //agregamos el formulario 1
-      { title: 'Formulario 2', component: Formulario2Page },//formulario 2
-      { title: 'Formulario 3', component: Formulario3Page } //formulario 3
+      { title: 'Formulario 2', component: Formulario2Page } //formulario 2
     ];
   }
 

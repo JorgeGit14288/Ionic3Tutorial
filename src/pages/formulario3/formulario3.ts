@@ -20,15 +20,13 @@ export class Formulario3Page {
     title: '',
     description: ''
   };
-
-
   logForm(form) {
     console.log(form.value)
   }
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-  
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Formulario3Page');

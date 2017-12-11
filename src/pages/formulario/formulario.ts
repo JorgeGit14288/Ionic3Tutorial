@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+//importamos el formulario a donde vamos a enviar los datos recibidos
+import { FormularioDetailsPage } from '../formulario-details/formulario-details';
 
 /**
  * Generated class for the FormularioPage page.
@@ -19,8 +21,11 @@ export class FormularioPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
   //accion del boton
-  logForm() {
+  logForm(event, item) {
     console.log(this.todo)
+    this.navCtrl.push(FormularioDetailsPage, {
+      item: this.todo
+    });
   }
 
   ionViewDidLoad() {
