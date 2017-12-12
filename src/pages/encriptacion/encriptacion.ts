@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms'; //lo importamos para usar formularios
+import { EncriptacionProvider } from '../../providers/encriptacion/encriptacion';
 //importamos la clase de encriptación
-import Sec from '../../util/security';
-import { security } from '../../util/security';
+
+
 
 /**
  * Generated class for the EncriptacionPage page.
@@ -27,7 +28,8 @@ myForm: FormGroup;
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     //lo importamos para usar formularios
-    public formBuilder: FormBuilder) {
+    public formBuilder: FormBuilder,
+    public encriptacion: EncriptacionProvider) {
       this.myForm = this.createMyForm();
   }
 
@@ -36,14 +38,12 @@ myForm: FormGroup;
     return this.formBuilder.group({
       key: ['', Validators.required],
       texto: ['', Validators.required],
-      resultado: [''],
-      desencriptado: ['']
     });
   }
-
-
   logForm() {
     console.log(this.myForm.value);
+    this.encriptado =  this.encriptacion.encriptarData(this.myForm.value.texto, this.myForm.value.key);
+    this.desencriptado = this.myForm.value.texto;
     console.log(this.myForm.value.key);
   }
   //cuando se carga la pagina
@@ -51,5 +51,4 @@ myForm: FormGroup;
     console.log('ionViewDidLoad EncriptacionPage');
     
   }
-
 }
