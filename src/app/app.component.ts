@@ -11,9 +11,6 @@ import { EncriptacionPage } from '../pages/encriptacion/encriptacion';
 import { FormularioPage } from '../pages/formulario/formulario';
 import { Formulario2Page } from '../pages/formulario2/formulario2';
 import { Formulario3Page } from '../pages/formulario3/formulario3';
-import { ContactsPage } from '../pages/contacts/contacts';
-
-
 
 
 
@@ -42,8 +39,7 @@ export class MyApp {
       { title: 'Encriptacion', component: EncriptacionPage }, //AGREGARMOS LA NUEVA PAGINA
       { title: 'Formulario 1', component: FormularioPage }, //agregamos el formulario 1
       { title: 'Formulario 2', component: Formulario2Page }, //formulario 2
-      { title: 'Formulario 3', component: Formulario3Page } ,//formulario 2
-      { title: 'Contactos', component: ContactsPage } // Lista de Contactos
+      { title: 'Formulario 3', component: Formulario3Page } //formulario 2
     ];
   }
   initializeApp() {

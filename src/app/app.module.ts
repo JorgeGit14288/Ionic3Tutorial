@@ -18,7 +18,6 @@ import { FormularioDetailsPage } from '../pages/formulario-details/formulario-de
 import { Formulario3Page } from '../pages/formulario3/formulario3';
 import { Formulario3DetailsPage } from '../pages/formulario3-details/formulario3-details';
 import { EncriptacionProvider } from '../providers/encriptacion/encriptacion';
-import { ContactsPage } from '../pages/contacts/contacts';
 import { ContactosProvider } from '../providers/contactos/contactos';
 
 
@@ -34,7 +33,6 @@ import { ContactosProvider } from '../providers/contactos/contactos';
     Formulario3Page,
     FormularioDetailsPage,
     Formulario3DetailsPage,
-    ContactsPage
     
   ],
   imports: [
@@ -53,7 +51,7 @@ import { ContactosProvider } from '../providers/contactos/contactos';
     Formulario3Page,
     FormularioDetailsPage,
     Formulario3DetailsPage,
-    ContactsPage
+  
   ],
   providers: [
     StatusBar,

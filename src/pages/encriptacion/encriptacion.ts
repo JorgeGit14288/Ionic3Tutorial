@@ -36,13 +36,14 @@ myForm: FormGroup;
   //creamos el formulario
   private createMyForm(){
     return this.formBuilder.group({
-      key: ['', Validators.required],
+      key: [''],
       texto: ['', Validators.required],
     });
   }
   logForm() {
     console.log(this.myForm.value);
     this.encriptado =  this.encriptacion.encriptarData(this.myForm.value.texto, this.myForm.value.key);
+    console.log(this.encriptado);
     this.desencriptado = this.myForm.value.texto;
     console.log(this.myForm.value.key);
   }
